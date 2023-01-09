@@ -1,0 +1,169 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+@keyframes change {
+    0%{
+        background-position:0 50% ;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
+.belakang{
+    width: 100%;
+    height: 100vh;
+    color: #ffffff;
+    background: linear-gradient(90deg, #576F72,#7D9D9C,#E4DCCF);
+    background-size: 400% 400%;
+    position: absolute;
+    animation: change 10s ease-in-out infinite;
+}
+.navbar{
+    position: absolute;
+    width: 23%;
+    height: 95%;
+    background: #D9D9D9;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    left: 20%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.isian{
+    position: absolute;
+    width: 60%;
+    height: 95%;
+    background: rgba(217, 217, 217, 0.6);
+    border-radius: 30px;
+    left: 63%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border: #576F72 solid 2px;
+}
+.judul{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 72px;
+    letter-spacing: 0.1em;
+    color: #665A48;
+    text-align: center;
+    margin-top: 8%;
+    margin-bottom: 0%;
+}
+
+.subjudul{
+    position: relative;
+}
+
+.subjudul a:before, .subjudul a:after{
+    position: absolute;
+    opacity: 0;
+    width: 0%;
+    height: 4px;
+    content: '';
+    background: #5F7161;
+    transition: all 0.3s;
+}
+.subjudul a:before
+{
+    left: 0px;
+    top: 0px;
+}
+
+.subjudul a:after
+{
+    right: 0px;
+    bottom: 0px;
+}
+
+.subjudul a:hover:before, .subjudul a:hover:after
+{
+    opacity: 1;
+    width: 100%;
+}
+
+.kelas{
+    border: #576F72 solid 1px;
+    text-align: center;
+    width: 80%;
+    height: 40%;
+    margin: auto;
+    margin-bottom: 2%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 29px;
+    line-height: 72px;
+    border-radius: 20px;
+    color: #5F7161;
+    position: relative;
+}
+.kelas a:before
+{
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    content: '';
+    background: #361500;
+    opacity: 0.3;
+    transition: all 0.3s;
+    border-radius: 20px;
+}
+
+.kelas a:hover:before
+{
+    width: 100%;
+}
+
+.kata{
+    margin-left: 10%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    color: #1C0A00;
+}
+.tidak{
+    border: #576F72 solid 1px;
+    text-align: center;
+    width: 80%;
+    height: 40%;
+    margin: auto;
+    margin-bottom: 2%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 29px;
+    line-height: 72px;
+    border-radius: 20px;
+    color: #EFEAD8;
+    position: relative;
+    background: #361500
+}
+.isian{
+    position: absolute;
+    width: 60%;
+    height: 95%;
+    background: rgba(217, 217, 217, 0.6);
+    border-radius: 30px;
+    left: 63%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border: #576F72 solid 2px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+
+
+
+

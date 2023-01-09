@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tugas Besar Teknologi Multimedia</title>
+    <link rel="stylesheet" href="servo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="belakang">
+        <div class="navbar">
+            <div class="judul"><div class="subjudul"><a>TUTORIAL</a></div></div>
+            <div class="menu">
+                <p class="kata">Menu</p>
+                <div class="kelas"><a href="home.html" style="text-decoration: none; color: #5F7161;">Home</a></div>
+                <div class="kelas rangkaian"><a href="rangkaian.html" style="text-decoration: none; color: #5F7161;">Rangkaian</a></div>
+                <div class="kelas"><a href="sensor.html" style="text-decoration: none; color: #5F7161;">Sensor Gerak</a></div>
+                <div class="kelas"><a href="lampu.html" style="text-decoration: none; color: #5F7161;">Lampu</a></div>
+                <div class="tidak "><a href="servo.html" style="text-decoration: none; color: #EFEAD8;">Servo</a></div>
+            </div>
+            <div>
+                <p class="kata">About</p>
+                <div class="kelas profile"><a href="profile.html" style="text-decoration: none;color: #5F7161;">Profile</a></div>
+            </div>
+
+        </div>
+        <div class="isian">
+            <div>
+                <div style="font: 700;font-family: 'Poppins';font-style: normal;font-size: 30px; margin-left: 22%;margin-right: 20%;margin-top: 5%;color: #541212;background-color: #EFEAD8;text-align: center;">
+                    Rangkaian Servo
+                </div>
+            </div>
+            <div class="besar1">
+                <div class="judul1">Servo</div>
+                <div class="penjelasan1">
+                    Motor servo bekerja berdasarkan mekanisme close loop control, dimana terdapat umpan balik (informasi) berupa posisi poros dan kecepatan yang diberikan kembali ke kontrol internal motor servo, walaupun umumnya hanya ada umpan balik posisi.
+                </div>
+            </div>
+            <div class="besar2">
+                <img src="assets/servo.jpg" class="sensorgerak" alt="" width="100%" style="border-radius: 20px;">
+            </div>
+            <div class="besar3">
+                <div class="judul3">
+                    Cara Merangkai
+                </div>
+                <div class="penjelasan3">
+                    1. Pin Ground dihubungkan ke pin GND, atau dapat dihubungkan ke pin negatif pada breadboard kemudian dihubungkan ke GND<br>
+                    2. Pin Power duhubngkan ke pin 5V, atau dapat dihubungkan ke pin positif pada breadboard kemudian dihubungkan ke 5V<br>
+                    3. Pin Signal dihubungkan ke pin biasa
+                </div>
+            </div>
+            <div class="copy">
+                <textarea style="text-align: left;" readonly spellcheck="false" class="text-code">
+            // C++ code
+            //
+            # include <Servo.h>
+            Servo myservo;
+            int pos;
+            void setup()
+            {
+                //pinMode sesuai dengan pin
+                Serial.begin(9600);
+                myservo.attach(4);
+            }
+
+            void loop()
+            {
+                if(distance < 1000){
+                    // berputar ke kanan
+                    for(pos = 180; pos >= 0; pos--)
+                    {
+                      myservo.write(pos);
+                      delay(50);
+                    }
+                    
+                  }else if(distance > 1000){
+                    // berputar ke kiri
+                    for(pos = 0; pos <= 180; pos++)
+                    {
+                      myservo.write(pos);
+                      delay(50);
+                    }
+                </textarea>
+                <button class="copy-button">
+                    <i class="fa fa-clone"></i>
+                </button>
+            </div>
+            
+<script type="text/javascript">
+        const copyBtn = document.querySelector(".copy-button");
+        const textArea = document.querySelector("textarea");
+        copyBtn.addEventListener("click",()=>{
+            textArea.select();
+            document.execCommand("copy");
+            copyBtn.innerHTML = "<i class='fa fa-check'></i>";
+            setTimeout(()=>{
+                document.getSelection().removeAllRanges();
+                copyBtn.innerHTML = "<i class='fa fa-clone'></i>"
+            },2000);
+        });
+    </script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" >
+        </div> 
+        </div> 
+        
+    </section>
+    
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tugas Besar Teknologi Multimedia</title>
+    <link rel="stylesheet" href="lampu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="belakang">
+        <div class="navbar">
+            <div class="judul"><div class="subjudul"><a>TUTORIAL</a></div></div>
+            <div class="menu">
+                <p class="kata">Menu</p>
+                <div class="kelas"><a href="home.html" style="text-decoration: none; color: #5F7161;">Home</a></div>
+                <div class="kelas rangkaian"><a href="rangkaian.html" style="text-decoration: none; color: #5F7161;">Rangkaian</a></div>
+                <div class="kelas"><a href="sensor.html" style="text-decoration: none; color: #5F7161;">Sensor Gerak</a></div>
+                <div class="tidak"><a href="lampu.html" style="text-decoration: none; color: #EFEAD8;">Lampu</a></div>
+                <div class="kelas servo"><a href="servo.html" style="text-decoration: none; color: #5F7161;">Servo</a></div>
+            </div>
+            <div>
+                <p class="kata">About</p>
+                <div class="kelas profile"><a href="profile.html" style="text-decoration: none;color: #5F7161;">Profile</a></div>
+            </div>
+
+        </div>
+        <div class="isian">
+            <div>
+                <div style="font: 700;font-family: 'Poppins';font-style: normal;font-size: 30px; margin-left: 22%;margin-right: 20%;margin-top: 5%;color: #541212;background-color: #EFEAD8;text-align: center;">
+                    Rangkaian Lampu LED
+                </div>
+            </div>
+            <div class="besar1">
+                <div class="judul1">Lampu LED</div>
+                <div class="penjelasan1">
+                    LED (Light Emitting Diode) merupakan salah satu komponen elektronika yang mengubah energi listrik menjadi energi cahaya.
+                    Komponen ini termasuk golongan keluarga dioda dikarenan bahan dasarnya terbuat dari bahan semikonduktor.
+                    Warna cahaya yang dipancarkan oleh LED bervariasi warnanya tergantung dari jenis bahan semikonduktor yang dipergunakan dapat pembuatan.
+                </div>
+            </div>
+            <div class="besar2">
+                <img src="assets/lampu.jpg" class="sensorgerak" alt="" width="100%" style="border-radius: 20px;">
+            </div>
+            <div class="besar3">
+                <div class="judul3">
+                    Cara Merangkai
+                </div>
+                <div class="penjelasan3">
+                    1. Pin katode dihubungkan ke pin negatif breadboard, kemudian dihubungkan langusng ke GND<br>
+                    2. Pin anode dihubungkan ke resistor lalu dihubungkan juga ke pin biasa<br>
+                </div>
+            </div>
+            <div class="copy">
+                <textarea style="text-align: left;" readonly spellcheck="false" class="text-code">
+            // C++ code
+            //
+            int merah = 5;
+            int hijau = 6;
+            void setup()
+            {
+                //pinMode sesuai dengan pin
+                pinMode(hijau, OUTPUT);
+                pinMode(merah, OUTPUT);
+            }
+
+            void loop()
+            {
+                if(distance < 1000){
+                    // berputar ke kanan
+                    digitalWrite(merah, HIGH);
+                    delay(500);
+                    digitalWrite(merah, LOW);
+                    delay(500);
+
+                  }else if(distance > 1000){
+                    // berputar ke kiri
+                    digitalWrite(hijau, HIGH);
+                    delay(500);
+                    digitalWrite(hijau, LOW);
+                    delay(500);
+                  }
+                </textarea>
+                <button class="copy-button">
+                    <i class="fa fa-clone"></i>
+                </button>
+            </div>
+            
+<script type="text/javascript">
+        const copyBtn = document.querySelector(".copy-button");
+        const textArea = document.querySelector("textarea");
+        copyBtn.addEventListener("click",()=>{
+            textArea.select();
+            document.execCommand("copy");
+            copyBtn.innerHTML = "<i class='fa fa-check'></i>";
+            setTimeout(()=>{
+                document.getSelection().removeAllRanges();
+                copyBtn.innerHTML = "<i class='fa fa-clone'></i>"
+            },2000);
+        });
+    </script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" >
+        </div> 
+        </div> 
+        
+    </section>
+    
+</body>
+</html>
